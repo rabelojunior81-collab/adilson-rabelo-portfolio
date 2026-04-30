@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análise Holística de Adequação — Solana Frontier Hackathon 2026 | Rabelus Lab</title>
+  <meta name="description" content="Análise preliminar de aderência dos projetos do ecossistema Rabelus Lab ao Solana Frontier Hackathon 2026, incluindo trilha Brasil, regras, logística presencial em São Paulo e recomendação de tese vencedora." />
+  <meta name="author" content="Adilson Rabelo Junior · Rabelus Lab" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Análise Holística de Adequação — Solana Frontier Hackathon 2026" />
+  <meta property="og:description" content="Convergência estratégica entre Colosseum, Superteam Brasil e os projetos do Rabelus Lab para escolha de submissão no Solana Frontier Hackathon 2026." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://rabelojunior81-collab.github.io/adilson-rabelo-portfolio/analise-hackathon-colosseum-frontier-2026.html" />
+  <link rel="canonical" href="https://rabelojunior81-collab.github.io/adilson-rabelo-portfolio/analise-hackathon-colosseum-frontier-2026.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --olive-300: #cde0ab; --olive-400: #afcb7d; --olive-500: #8fb054; --olive-600: #6f8c3c;
+      --olive-700: #556b30; --olive-800: #45552a; --olive-950: #1e2612; --bg-base: #080c05;
+      --bg-card: rgba(69, 85, 42, 0.12); --glass-bg: rgba(69, 85, 42, 0.18);
+      --glass-border: rgba(175, 203, 125, 0.25); --glass-strong: rgba(69, 85, 42, 0.45);
+      --text-main: #f3f8e9; --text-muted: #afcb7d; --accent-fire: #ff6b35; --accent-gold: #ffd700;
+      --accent-cyan: #00d4ff; --accent-purple: #8b5cf6; --glow-olive: rgba(143, 176, 84, 0.4);
+      --glow-fire: rgba(255, 107, 53, 0.4);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif; background-color: var(--bg-base); color: var(--text-main); overflow-x: hidden;
+      background-image: linear-gradient(rgba(175,203,125,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(175,203,125,.025) 1px, transparent 1px);
+      background-size: 40px 40px; background-attachment: fixed;
+    }
+    a { color: var(--olive-300); text-decoration: none; }
+    a:hover { color: var(--accent-fire); }
+    .navbar { position: fixed; top:0; left:0; right:0; z-index:1000; height:64px; display:flex; align-items:center; justify-content:space-between; padding:0 40px; background:rgba(8,12,5,.88); backdrop-filter:blur(20px); border-bottom:1px solid var(--glass-border); }
+    .navbar-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+    .logo-mark { width:36px; height:36px; border:1px solid var(--olive-500); display:grid; place-items:center; color:var(--accent-fire); font-family:'JetBrains Mono', monospace; font-weight:900; box-shadow:0 0 18px var(--glow-olive); }
+    .navbar-brand { font-size:1rem; font-weight:700; color:var(--olive-300); letter-spacing:2px; text-transform:uppercase; }
+    .navbar-brand span { color:var(--olive-500); }
+    .navbar-links { display:flex; gap:24px; list-style:none; }
+    .navbar-links a { color:var(--text-muted); font-size:.82rem; font-weight:600; letter-spacing:.5px; text-transform:uppercase; }
+    .hero { min-height: 92vh; display:flex; align-items:center; position:relative; overflow:hidden; padding:120px 80px 80px; }
+    .hero::before { content:''; position:absolute; width:720px; height:720px; border-radius:50%; background:radial-gradient(circle, rgba(143,176,84,.14), transparent 68%); top:48%; left:50%; transform:translate(-50%,-50%); animation:pulse 5s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:.55; transform:translate(-50%,-50%) scale(1)} 50%{opacity:1; transform:translate(-50%,-50%) scale(1.08)} }
+    .hero-content { max-width:1280px; margin:0 auto; position:relative; z-index:2; display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
+    .badge { display:inline-flex; gap:8px; align-items:center; padding:7px 14px; border:1px solid var(--glass-border); background:var(--glass-bg); color:var(--olive-400); text-transform:uppercase; font-family:'JetBrains Mono', monospace; font-size:.72rem; letter-spacing:1.4px; margin-bottom:22px; }
+    .dot { width:7px; height:7px; border-radius:50%; background:var(--olive-500); box-shadow:0 0 12px var(--glow-olive); }
+    h1 { font-size:clamp(2.5rem,5vw,4.9rem); line-height:1.02; font-weight:900; margin-bottom:20px; }
+    .gradient { background:linear-gradient(135deg, var(--olive-300), var(--olive-500), var(--accent-fire)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+    .lead { color:rgba(243,248,233,.78); font-size:1.08rem; line-height:1.85; max-width:760px; }
+    .hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:34px; }
+    .btn { padding:12px 22px; border:1px solid var(--olive-500); background:var(--glass-strong); color:var(--olive-300); font-size:.82rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; transition:.25s; }
+    .btn:hover { transform:translateY(-2px); box-shadow:0 0 24px var(--glow-olive); color:var(--text-main); }
+    .terminal { background:rgba(0,0,0,.38); border:1px solid var(--glass-border); padding:24px; box-shadow:0 0 40px rgba(0,0,0,.28); font-family:'JetBrains Mono', monospace; }
+    .terminal-line { display:block; color:rgba(243,248,233,.72); font-size:.82rem; line-height:1.9; }
+    .terminal-good { color:var(--olive-300); } .terminal-warn { color:var(--accent-gold); } .terminal-hot { color:var(--accent-fire); }
+    main { max-width:1280px; margin:0 auto; padding:30px 40px 90px; }
+    section { margin:72px 0; }
+    .section-title { font-size:2.1rem; font-weight:900; margin-bottom:16px; }
+    .section-title::before { content:'// '; color:var(--accent-fire); font-family:'JetBrains Mono', monospace; }
+    .section-subtitle { color:rgba(243,248,233,.7); line-height:1.8; max-width:980px; margin-bottom:28px; }
+    .grid { display:grid; gap:20px; }
+    .grid-2 { grid-template-columns:repeat(2, minmax(0,1fr)); } .grid-3 { grid-template-columns:repeat(3, minmax(0,1fr)); }
+    .card { background:var(--glass-bg); border:1px solid var(--glass-border); padding:24px; position:relative; overflow:hidden; }
+    .card::after { content:''; position:absolute; inset:auto -20% -60% -20%; height:120px; background:radial-gradient(circle, rgba(143,176,84,.12), transparent 70%); pointer-events:none; }
+    .card h3 { font-size:1.15rem; margin-bottom:10px; color:var(--olive-300); }
+    .card p, .card li { color:rgba(243,248,233,.72); line-height:1.75; font-size:.95rem; }
+    .card ul { padding-left:18px; }
+    .metric { font-family:'JetBrains Mono', monospace; font-size:2rem; color:var(--olive-400); font-weight:900; display:block; margin-bottom:6px; }
+    table { width:100%; border-collapse:collapse; background:rgba(69,85,42,.10); border:1px solid var(--glass-border); overflow:hidden; }
+    th, td { padding:14px 16px; border-bottom:1px solid rgba(175,203,125,.14); vertical-align:top; text-align:left; }
+    th { color:var(--olive-300); background:rgba(69,85,42,.28); font-size:.78rem; text-transform:uppercase; letter-spacing:.9px; }
+    td { color:rgba(243,248,233,.78); line-height:1.6; font-size:.92rem; }
+    .score { font-family:'JetBrains Mono', monospace; color:var(--accent-gold); font-weight:900; white-space:nowrap; }
+    .tag { display:inline-block; border:1px solid rgba(175,203,125,.25); background:rgba(143,176,84,.12); color:var(--olive-300); padding:4px 8px; margin:2px; font-family:'JetBrains Mono', monospace; font-size:.72rem; }
+    blockquote { border-left:3px solid var(--accent-fire); padding:16px 20px; background:rgba(255,107,53,.07); color:rgba(243,248,233,.82); line-height:1.75; }
+    .winner { border-color:rgba(255,107,53,.5); box-shadow:0 0 28px rgba(255,107,53,.08); }
+    .winner h3 { color:var(--accent-fire); }
+    .footer { border-top:1px solid var(--glass-border); padding:38px 40px; text-align:center; color:rgba(243,248,233,.58); }
+    @media (max-width: 980px) { .hero{padding:100px 24px 50px}.hero-content{grid-template-columns:1fr}.navbar{padding:0 18px}.navbar-links{display:none} main{padding:20px}.grid-2,.grid-3{grid-template-columns:1fr} table{font-size:.86rem} th,td{padding:10px} }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="v2.html" class="navbar-logo"><span class="logo-mark">R</span><span class="navbar-brand">RABELUS <span>LAB</span></span></a>
+    <ul class="navbar-links">
+      <li><a href="#resumo">Resumo</a></li><li><a href="#hackathon">Hackathon</a></li><li><a href="#ranking">Ranking</a></li><li><a href="#roadmap">Roadmap</a></li><li><a href="#fontes">Fontes</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div>
+        <div class="badge"><span class="dot"></span> análise preliminar · abril/2026</div>
+        <h1>Convergência Rabelus Lab <span class="gradient">× Solana Frontier Hackathon</span></h1>
+        <p class="lead">Esta página consolida uma leitura de dentro para fora do portfólio Rabelus Lab e de fora para dentro do ecossistema Colosseum/Superteam. O objetivo é identificar qual tese tem maior probabilidade de competir bem no <strong>Solana Frontier Hackathon 2026</strong>, na <strong>trilha Brasil</strong> e nas camadas de avaliação técnica, produto, mercado, narrativa e execução.</p>
+        <div class="hero-actions"><a class="btn" href="#recomendacao">Ver recomendação</a><a class="btn" href="https://colosseum.com/frontier" target="_blank" rel="noopener">Frontier Hackathon</a><a class="btn" href="https://github.com/rabelojunior81-collab/SOL-Jobs" target="_blank" rel="noopener">Repo SOL-Jobs</a></div>
+      </div>
+      <div class="terminal" aria-label="Resumo executivo em estilo terminal">
+        <span class="terminal-line terminal-good">✓ Janela oficial: 06/04/2026 → 11/05/2026</span>
+        <span class="terminal-line terminal-warn">! Inscrição individual: até 04/05/2026</span>
+        <span class="terminal-line terminal-good">✓ Trilha Brasil: US$ 10.000 em prêmios regionais</span>
+        <span class="terminal-line terminal-hot">→ Restrição principal: 1 participante · 1 time · 1 projeto principal</span>
+        <span class="terminal-line">→ Candidato #1: SOL-Jobs · Web3 freelance marketplace</span>
+        <span class="terminal-line">→ Candidato #2: Tessy/Argenta · developer infrastructure</span>
+        <span class="terminal-line terminal-good">✓ Estratégia: Solana-native escrow + reputation + AI execution layer</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="resumo">
+      <h2 class="section-title">Resumo executivo</h2>
+      <p class="section-subtitle">A conclusão preliminar é que o projeto com melhor ponto de partida competitivo é o <strong>SOL-Jobs</strong>, desde que seja reposicionado como um produto Solana-first com um MVP demonstrável durante o período oficial. A segunda melhor estratégia não é submeter Tessy ou Argenta isoladamente, mas incorporá-los como vantagem operacional: Tessy para produzir e demonstrar o build; Argenta/Inception para documentar método, agentes, execução e governança técnica.</p>
+      <div class="grid grid-3">
+        <div class="card winner"><span class="metric">#1</span><h3>SOL-Jobs como tese principal</h3><p>É o único projeto já explicitamente alinhado a <strong>Solana, Web3, marketplace, escrow, reputação e economia de talentos</strong>. A aderência ao ecossistema é direta e a narrativa Brasil é forte.</p></div>
+        <div class="card"><span class="metric">#2</span><h3>Tessy como multiplicador</h3><p>Tessy é excelente como infraestrutura de builder e demonstração técnica, mas precisa de integração on-chain muito clara para não parecer apenas uma IDE com IA.</p></div>
+        <div class="card"><span class="metric">#3</span><h3>Argenta/Inception como diferencial</h3><p>Argenta e Inception elevam a execução, a confiabilidade e a documentação do processo, mas funcionam melhor como camada de agentes e metodologia acoplada ao SOL-Jobs.</p></div>
+      </div>
+    </section>
+
+    <section id="hackathon">
+      <h2 class="section-title">Pormenores do hackathon</h2>
+      <p class="section-subtitle">A pesquisa usou a página oficial da Colosseum, o regulamento oficial em PDF, a página do Frontier Hackathon, a Superteam Earn e páginas Luma associadas ao The Garage Brazil/Solana House Brazil. Os pontos abaixo são os que mais afetam decisão de produto, time e escopo.</p>
+      <div class="grid grid-2">
+        <div class="card"><h3>Regras críticas</h3><ul><li>O <strong>Solana Frontier Hackathon</strong> ocorre de <strong>6 de abril a 11 de maio de 2026</strong>.</li><li>A inscrição individual deve ocorrer até <strong>4 de maio de 2026</strong>.</li><li>Cada participante pode integrar <strong>apenas um time</strong>.</li><li>Cada time pode submeter <strong>um projeto por vez</strong> no hackathon principal.</li><li>Projetos novos ou ainda não estabelecidos são elegíveis; trabalho anterior deve ser declarado, e o julgamento deve recair sobre o avanço feito durante o período oficial.</li></ul></div>
+        <div class="card"><h3>Critérios oficiais</h3><ul><li>Funcionalidade e qualidade do código.</li><li>Impacto potencial no ecossistema Solana.</li><li>Novidade e diferenciação.</li><li>Experiência do usuário usando a performance da Solana.</li><li>Composabilidade/open-source com primitivas Solana.</li><li>Plano de negócio e compreensão de mercado.</li></ul></div>
+        <div class="card"><h3>Trilha Brasil</h3><p>A <strong>Superteam Brasil</strong> oferece uma side track regional com <strong>US$ 10.000</strong> em prêmios. Para concorrer, o projeto deve ser submetido também no hackathon global da Colosseum, com país marcado como <strong>Brazil</strong>, e depois inscrito na listagem específica da Superteam Earn.</p></div>
+        <div class="card"><h3>Materiais exigidos</h3><p>A trilha Brasil exige nome, descrição, redes sociais, logo/imagem, membros do time, background, localização no Brasil, link GitHub/GitLab quando open-source, vídeo de pitch de até 3 minutos e vídeo técnico de até 3 minutos demonstrando funcionalidades e integração com Solana.</p></div>
+      </div>
+    </section>
+
+    <section id="garage">
+      <h2 class="section-title">Espaço presencial em São Paulo</h2>
+      <blockquote>O The Garage Brazil/Solana House Brazil aparece como uma oportunidade de aceleração presencial para builders do Frontier Hackathon, com fase online, imersão em São Paulo, mentorias, workshops, sessões diárias de build e Demo Day.</blockquote>
+      <div class="grid grid-3" style="margin-top:24px">
+        <div class="card"><h3>Cronograma local</h3><p>Kickoff online de <strong>13 a 17 de abril</strong>, fase presencial de <strong>20 de abril a 8 de maio</strong> em São Paulo e <strong>Demo Day em 9 de maio</strong>.</p></div>
+        <div class="card"><h3>Local e rotina</h3><p>A fase presencial é associada à <strong>Solana House Brazil</strong>. A página de hospedagem informa endereço em <strong>R. Umburanas, 912 — Alto de Pinheiros, São Paulo — SP</strong>. A rotina prevista combina build, almoço, mentoria 1:1, workshops e eventos paralelos.</p></div>
+        <div class="card"><h3>Implicação estratégica</h3><p>Para maximizar chance na trilha Brasil, a tese escolhida deve chegar com pitch, demo e GitHub já organizados antes da semana final, usando a imersão para validação, networking, mentores e storytelling.</p></div>
+      </div>
+    </section>
+
+    <section id="ranking">
+      <h2 class="section-title">Ranking de aderência dos projetos</h2>
+      <p class="section-subtitle">A matriz abaixo cruza os projetos do portfólio e dos repositórios públicos com os critérios do hackathon. A pontuação é qualitativa, de 0 a 10, considerando aderência Solana, clareza de MVP, impacto no ecossistema, força de mercado, narrativa Brasil, viabilidade até a submissão e capacidade de demonstração técnica.</p>
+      <table>
+        <thead><tr><th>Projeto/Tese</th><th>Aderência</th><th>Por que pode vencer</th><th>Risco central</th><th>Movimento recomendado</th></tr></thead>
+        <tbody>
+          <tr><td><strong>SOL-Jobs</strong><br><span class="tag">Solana</span><span class="tag">Marketplace</span><span class="tag">Escrow</span><span class="tag">Reputação</span></td><td class="score">9.1/10</td><td>Resolve um problema econômico real no Brasil, conversa com stablecoins, pagamentos, escrow, reputação e composabilidade. Tem narrativa de impacto local e aplicação direta de Solana.</td><td>Precisa provar que não é apenas um pitch: requer MVP on-chain simples, seguro e demonstrável.</td><td>Submeter como tese principal: <strong>Solana-native escrow + reputation rails for Brazilian gig work</strong>.</td></tr>
+          <tr><td><strong>Tessy/Argenta Fênix</strong><br><span class="tag">DevTools</span><span class="tag">IA</span><span class="tag">Local-first</span></td><td class="score">8.0/10</td><td>Fortíssimo para categoria de infraestrutura de builders. Pode virar IDE/agente que acelera desenvolvimento Solana com templates Anchor, auditoria e geração de programas.</td><td>Sem integração Solana nativa, fica fora do centro do hackathon; IDEs são difíceis de explicar em 3 minutos.</td><td>Usar como camada de build e, opcionalmente, como feature: <strong>Solana Build Copilot</strong> dentro do SOL-Jobs.</td></tr>
+          <tr><td><strong>Argenta/Inception</strong><br><span class="tag">Agentes</span><span class="tag">Metodologia</span><span class="tag">CLI</span></td><td class="score">7.7/10</td><td>Ajuda a mostrar execução disciplinada, agentes, quality gates e governança. Pode virar agente de compliance de submissão e auditoria de contratos.</td><td>Pode soar abstrato se submetido sozinho; precisa de produto usuário-final ou devtool com Solana clara.</td><td>Acoplar ao SOL-Jobs como <strong>AI operations layer</strong> para contratação, disputa, reputação e documentação.</td></tr>
+          <tr><td><strong>DiData</strong><br><span class="tag">EdTech</span><span class="tag">IA</span><span class="tag">Brasil</span></td><td class="score">7.1/10</td><td>Grande impacto social; poderia usar Solana para certificados, bolsas, credenciais e marketplace educacional.</td><td>Integração on-chain pode parecer acessória; mercado EdTech exige validação ampla.</td><td>Manter como opção B: <strong>learn-to-earn / credentialing on Solana</strong>, se houver time educacional forte.</td></tr>
+          <tr><td><strong>Seldon / Trade Companion</strong><br><span class="tag">Fintech</span><span class="tag">Previsão</span><span class="tag">Trading</span></td><td class="score">6.9/10</td><td>Conecta com DeFi e análise de risco, podendo gerar alertas, reputação de sinais e estratégias para ativos Solana.</td><td>Risco regulatório/narrativo e complexidade de provar valor sem parecer ferramenta genérica de trading.</td><td>Não submeter como tese principal agora; aproveitar componentes de análise de risco para SOL-Jobs.</td></tr>
+          <tr><td><strong>Talia</strong><br><span class="tag">Multimodal</span><span class="tag">Criativo</span><span class="tag">Gemini</span></td><td class="score">6.6/10</td><td>Boa interface e demo visual; poderia gerar pitch, assets, vídeos, NFTs ou agentes criativos.</td><td>Integração Solana tende a ser periférica se não virar marketplace criativo ou tokenização real.</td><td>Usar como engine de assets/pitch do projeto, não como submissão principal.</td></tr>
+          <tr><td><strong>Slash / Jogos</strong><br><span class="tag">Gaming</span><span class="tag">Procedural</span></td><td class="score">6.4/10</td><td>Games são naturais para NFTs, itens e economias on-chain; demo pode ser atrativa.</td><td>Alta concorrência e risco de escopo; precisa gameplay polido e economia clara.</td><td>Não priorizar salvo se já houver demo superior; absorver mecânicas de reputação/gamificação no SOL-Jobs.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="recomendacao">
+      <h2 class="section-title">Recomendação de tese vencedora</h2>
+      <div class="card winner">
+        <h3>SOL-Jobs Frontier: protocolo de escrow, reputação e pagamentos para trabalho digital brasileiro na Solana</h3>
+        <p>A melhor convergência é transformar o SOL-Jobs em uma aplicação Solana-native de contratação e entrega de serviços digitais, focada em <strong>escrow programável</strong>, <strong>pagamentos em stablecoin/SOL</strong>, <strong>reputação portável</strong> e <strong>resolução de disputas assistida por IA</strong>. A narrativa deve ser: “o Brasil tem talento global, mas sofre com fricção de pagamento, confiança e intermediação; Solana permite uma camada barata, rápida e aberta para contratos de trabalho digital”.</p>
+      </div>
+      <div class="grid grid-2" style="margin-top:22px">
+        <div class="card"><h3>MVP mínimo competitivo</h3><ul><li>Conectar wallet Solana.</li><li>Criar job com escopo, valor e prazo.</li><li>Depositar valor em escrow on-chain ou simulado com programa local/devnet.</li><li>Freelancer aceitar job e registrar milestone.</li><li>Cliente aprovar entrega e liberar pagamento.</li><li>Emitir reputação/attestation simples para cliente e freelancer.</li><li>Dashboard com histórico público/componível.</li></ul></div>
+        <div class="card"><h3>Feature de diferenciação</h3><ul><li>Agente Argenta para gerar contrato de trabalho legível e hash do escopo.</li><li>Tessy como ambiente demonstrável de criação/auditoria do programa Solana.</li><li>Dispute assistant com IA, deixando a decisão final humana.</li><li>“Brazil Talent Passport”: reputação portável para builders brasileiros.</li><li>Vídeo técnico mostrando transação, conta, escrow e release em menos de 3 minutos.</li></ul></div>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <h2 class="section-title">Plano de execução até submissão</h2>
+      <table>
+        <thead><tr><th>Fase</th><th>Objetivo</th><th>Entregáveis</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Dia 1</strong></td><td>Congelar escopo e narrativa.</td><td>Nome final, one-liner, README hackathon, arquitetura, backlog de 10 tarefas, critérios de demo.</td></tr>
+          <tr><td><strong>Dias 2–3</strong></td><td>Solana core.</td><td>Wallet connect, modelo de job, criação de escrow/milestone em devnet, scripts de teste e seeds de demonstração.</td></tr>
+          <tr><td><strong>Dias 4–5</strong></td><td>UX e prova de produto.</td><td>Fluxo cliente/freelancer, dashboard, histórico de transações, telas de reputação e integração de IA para escopo/disputa.</td></tr>
+          <tr><td><strong>Dias 6–7</strong></td><td>Polimento competitivo.</td><td>Pitch deck curto, vídeo de pitch, vídeo técnico, issue tracker limpo, licença, roadmap pós-hackathon e submission copy.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="decisao">
+      <h2 class="section-title">Decisões para a próxima iteração</h2>
+      <p class="section-subtitle">A próxima rodada deve transformar esta análise em escolha formal de projeto, backlog técnico e estratégia de submissão. A decisão mais importante é não dispersar energia em múltiplos projetos, porque o regulamento principal empurra a estratégia para <strong>um projeto principal muito bem executado</strong>.</p>
+      <div class="grid grid-3">
+        <div class="card"><h3>Decisão 1</h3><p>Confirmar SOL-Jobs como submissão principal ou escolher Tessy-Solana DevKit como alternativa devtool.</p></div>
+        <div class="card"><h3>Decisão 2</h3><p>Escolher se o programa Solana será Anchor completo, Solana program simples, ou demo devnet com escrow parcialmente simulado.</p></div>
+        <div class="card"><h3>Decisão 3</h3><p>Definir se haverá time com mais membros. Como cada participante só entra em um time, convém priorizar complementaridade: Solana dev, UX/produto, pitch/growth.</p></div>
+      </div>
+    </section>
+
+    <section id="fontes">
+      <h2 class="section-title">Fontes, URLs e evidências</h2>
+      <table>
+        <thead><tr><th>Categoria</th><th>Fonte</th><th>Uso na análise</th></tr></thead>
+        <tbody>
+          <tr><td>Hackathon oficial</td><td><a href="https://colosseum.com/frontier" target="_blank" rel="noopener">colosseum.com/frontier</a></td><td>Página pública do Solana Frontier Hackathon.</td></tr>
+          <tr><td>Regulamento</td><td><a href="https://colosseum.com/legal/Solana%20Frontier%20Hackathon%20Rules.pdf" target="_blank" rel="noopener">Solana Frontier Hackathon Rules PDF</a></td><td>Datas, elegibilidade, restrições de time/projeto, julgamento e prêmios.</td></tr>
+          <tr><td>Trilha Brasil</td><td><a href="https://superteam.fun/earn/listing/hackathon-superteambrasil" target="_blank" rel="noopener">Superteam Earn · Hackathon Superteam Brasil</a></td><td>Prêmios regionais, requisitos de submissão e critérios específicos da trilha Brasil.</td></tr>
+          <tr><td>Imersão</td><td><a href="https://luma.com/thegaragebr" target="_blank" rel="noopener">The Garage Brazil · Luma</a></td><td>Cronograma presencial, rotina de build, mentorias e workshops.</td></tr>
+          <tr><td>Hospedagem</td><td><a href="https://luma.com/solanahousing" target="_blank" rel="noopener">Solana Housing · Luma</a></td><td>Endereço público informado e política de solicitação de hospedagem.</td></tr>
+          <tr><td>Portfólio</td><td><a href="https://rabelojunior81-collab.github.io/adilson-rabelo-portfolio/v2.html" target="_blank" rel="noopener">Portfólio Rabelus Lab v2</a></td><td>Estilo visual, famílias de projetos e narrativa do ecossistema.</td></tr>
+          <tr><td>Repositórios</td><td><a href="https://github.com/rabelojunior81-collab" target="_blank" rel="noopener">GitHub rabelojunior81-collab</a></td><td>Inventário de projetos públicos e análise de candidatos.</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>Rabelus Lab</strong> · análise preliminar para decisão estratégica de submissão · gerado em 29/04/2026.</p>
+    <p style="margin-top:8px"><a href="v2.html">Voltar ao portfólio</a> · <a href="https://github.com/rabelojunior81-collab/adilson-rabelo-portfolio" target="_blank" rel="noopener">Ver repositório</a></p>
+  </footer>
+</body>
+</html>
