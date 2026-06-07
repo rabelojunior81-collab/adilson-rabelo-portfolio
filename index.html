@@ -1,14 +1,568 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adilson Rabelo Junior | AI Product Engineer</title>
-<meta name="description" content="AI Product Engineer and LLM Agent Systems Builder creating AI-first prototypes, multimodal apps, internal tools, developer workflows and documented agentic systems.">
-<meta http-equiv="refresh" content="0; url=v3.html">
-<script>window.location.replace('v3.html');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adilson Rabelo Junior | AI Product Engineer & LLM Agent Systems Builder</title>
+  <meta name="description" content="AI Product Engineer and LLM Agent Systems Builder creating AI-first prototypes, multimodal apps, internal tools, developer workflows and documented agentic systems." />
+  <meta name="author" content="Adilson Rabelo Junior" />
+  <meta property="og:title" content="Adilson Rabelo Junior | AI Product Engineer" />
+  <meta property="og:description" content="AI-first builder focused on LLM agents, multimodal products, developer tools, internal automation and technical documentation." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/persona-AdilsonRabeloJunior-1774488510967.png" />
+  <meta name="theme-color" content="#070A12" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adilson Rabelo Junior",
+    "jobTitle": "AI Product Engineer and LLM Agent Systems Builder",
+    "url": "https://rabelojunior81-collab.github.io/adilson-rabelo-portfolio/",
+    "sameAs": [
+      "https://github.com/rabelojunior81-collab"
+    ],
+    "knowsAbout": [
+      "LLM agents",
+      "AI product prototyping",
+      "React",
+      "TypeScript",
+      "Google Gemini",
+      "multimodal AI",
+      "developer tooling",
+      "technical documentation"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #070A12;
+      --panel: rgba(13, 18, 32, 0.84);
+      --panel-strong: rgba(17, 24, 42, 0.94);
+      --text: #F4F7FB;
+      --muted: #AEB9C9;
+      --soft: #748197;
+      --line: rgba(180, 200, 230, 0.18);
+      --gold: #E7C46C;
+      --gold-soft: rgba(231, 196, 108, 0.16);
+      --cyan: #7AE7F5;
+      --violet: #9E8CFF;
+      --green: #79F2B4;
+      --danger: #F59E8B;
+      --shadow: 0 24px 80px rgba(0, 0, 0, 0.42);
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 18% 8%, rgba(122, 231, 245, 0.13), transparent 32rem),
+        radial-gradient(circle at 78% 12%, rgba(231, 196, 108, 0.14), transparent 34rem),
+        radial-gradient(circle at 50% 90%, rgba(158, 140, 255, 0.13), transparent 38rem),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img, video { max-width: 100%; display: block; }
+
+    .ambient {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.62;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.028) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.028) 1px, transparent 1px);
+      background-size: 54px 54px;
+      mask-image: radial-gradient(circle at 50% 28%, black, transparent 78%);
+    }
+
+    .wrap { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(7, 10, 18, 0.76);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand img { width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 0 16px rgba(231,196,108,.22)); }
+    .brand-text { display: grid; line-height: 1.1; }
+    .brand-text strong { font-size: 0.95rem; letter-spacing: 0.02em; }
+    .brand-text span { color: var(--muted); font-size: 0.78rem; }
+
+    .navlinks { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+    .navlinks a, .chip-button {
+      border: 1px solid transparent;
+      color: var(--muted);
+      padding: 8px 10px;
+      font-size: 0.84rem;
+      background: transparent;
+      cursor: pointer;
+      transition: 180ms ease;
+    }
+    .navlinks a:hover, .chip-button:hover { color: var(--text); border-color: var(--line); background: rgba(255,255,255,0.035); }
+
+    .hero { padding: 86px 0 46px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.14fr) minmax(280px, 0.86fr); gap: 34px; align-items: center; }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gold);
+      background: var(--gold-soft);
+      border: 1px solid rgba(231,196,108,.26);
+      padding: 8px 11px;
+      font-size: 0.82rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.45rem, 7vw, 5.8rem);
+      line-height: .94;
+      letter-spacing: -0.075em;
+      max-width: 980px;
+    }
+    .gradient-text {
+      background: linear-gradient(92deg, #fff 0%, #E7C46C 35%, #7AE7F5 68%, #D8D2FF 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .subtitle {
+      margin: 22px 0 0;
+      color: #D8E2F1;
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+      max-width: 760px;
+    }
+    .subtitle strong { color: var(--text); }
+    .signature {
+      margin-top: 16px;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.035);
+      color: var(--text);
+      font-weight: 700;
+      font-size: .92rem;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    .btn:hover { transform: translateY(-2px); border-color: rgba(231,196,108,.42); background: rgba(231,196,108,.10); }
+    .btn.primary { background: linear-gradient(135deg, rgba(231,196,108,.25), rgba(122,231,245,.12)); border-color: rgba(231,196,108,.48); }
+
+    .portrait-card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+      box-shadow: var(--shadow);
+      padding: 16px;
+      position: relative;
+      isolation: isolate;
+    }
+    .portrait-card::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      background: linear-gradient(135deg, rgba(231,196,108,.28), transparent 32%, rgba(122,231,245,.20));
+      z-index: -1;
+      opacity: .6;
+    }
+    .portrait-frame { border: 1px solid var(--line); overflow: hidden; background: #0b1020; display: flex; align-items: center; justify-content: center; }
+    .portrait-frame img { width: 100%; height: auto; object-fit: contain; object-position: center; }
+    .portrait-caption { padding-top: 13px; color: var(--muted); font-size: .9rem; }
+
+    .proof-bar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; margin-top: 42px; }
+    .metric {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.035);
+      padding: 16px 14px;
+      min-height: 116px;
+    }
+    .metric strong { display: block; font-size: clamp(1.55rem, 3vw, 2.1rem); line-height: 1; color: var(--gold); letter-spacing: -0.04em; }
+    .metric span { display: block; margin-top: 8px; color: var(--muted); font-size: .86rem; }
+
+    section { padding: 54px 0; }
+    .section-head { display: grid; gap: 10px; margin-bottom: 22px; max-width: 860px; }
+    .kicker { color: var(--gold); letter-spacing: .12em; text-transform: uppercase; font-size: .78rem; font-weight: 800; }
+    h2 { margin: 0; font-size: clamp(1.7rem, 4vw, 3.1rem); line-height: 1.04; letter-spacing: -0.055em; }
+    .lead { color: var(--muted); font-size: 1rem; margin: 0; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .card {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      padding: 22px;
+      box-shadow: 0 18px 55px rgba(0,0,0,.18);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+    .card:hover { transform: translateY(-3px); border-color: rgba(122,231,245,.28); background: var(--panel-strong); }
+    .card h3 { margin: 0 0 8px; font-size: 1.05rem; letter-spacing: -0.02em; }
+    .card p { margin: 0; color: var(--muted); }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 15px; }
+    .tag { border: 1px solid var(--line); color: #D5DEEC; padding: 5px 8px; font-size: .76rem; background: rgba(255,255,255,.03); }
+
+    .case-card { display: grid; gap: 16px; }
+    .case-top { display: flex; justify-content: space-between; gap: 14px; align-items: flex-start; }
+    .case-status { color: var(--green); border: 1px solid rgba(121,242,180,.24); background: rgba(121,242,180,.08); padding: 5px 8px; font-size: .72rem; white-space: nowrap; }
+    .case-card .small { color: var(--soft); font-size: .86rem; }
+
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); background: rgba(255,255,255,.025); }
+    table { width: 100%; border-collapse: collapse; min-width: 840px; }
+    th, td { padding: 14px 15px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--gold); font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; background: rgba(255,255,255,.035); }
+    td { color: #D5DEEC; font-size: .92rem; }
+    tr:last-child td { border-bottom: 0; }
+    td a { color: var(--cyan); }
+
+    .timeline { display: grid; gap: 12px; }
+    .timeline-item { display: grid; grid-template-columns: 120px 1fr; gap: 18px; border: 1px solid var(--line); background: rgba(255,255,255,.028); padding: 16px; }
+    .timeline-item strong { color: var(--gold); }
+    .timeline-item p { margin: 0; color: var(--muted); }
+
+    .note {
+      border-left: 3px solid var(--gold);
+      background: rgba(231,196,108,.08);
+      padding: 16px 18px;
+      color: #E8EDF7;
+      margin-top: 18px;
+    }
+
+    .split-panel {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .pt-panel { border-color: rgba(231,196,108,.28); }
+    .footer { padding: 38px 0 52px; border-top: 1px solid var(--line); color: var(--muted); }
+    .footer-grid { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+
+    .copy-feedback { position: fixed; right: 18px; bottom: 18px; background: rgba(13,18,32,.96); border: 1px solid rgba(122,231,245,.34); color: var(--text); padding: 12px 14px; opacity: 0; transform: translateY(8px); transition: 180ms ease; z-index: 40; }
+    .copy-feedback.show { opacity: 1; transform: translateY(0); }
+
+    @media (max-width: 980px) {
+      .hero-grid, .grid-3, .grid-2, .split-panel { grid-template-columns: 1fr; }
+      .proof-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .portrait-card { max-width: 520px; margin: 0 auto; }
+    }
+
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 22px, var(--max)); }
+      .nav { min-height: 62px; }
+      .brand-text span { display: none; }
+      .navlinks a:not(.keep), .chip-button { display: none; }
+      .hero { padding: 54px 0 28px; }
+      h1 { letter-spacing: -0.055em; }
+      .proof-bar { grid-template-columns: 1fr; }
+      .metric { min-height: unset; }
+      section { padding: 38px 0; }
+      .timeline-item { grid-template-columns: 1fr; gap: 6px; }
+      .card { padding: 18px; }
+      .btn { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-<p>Redirecting to <a href="v3.html">the updated portfolio</a>.</p>
+  <div class="ambient" aria-hidden="true"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Go to top">
+        <img src="assets/argenta_phoenix_logo_1774863937790.png" alt="Rabelus Lab Phoenix logo" />
+        <span class="brand-text"><strong>Adilson Rabelo Jr.</strong><span>AI-first builder · Rabelus Lab</span></span>
+      </a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#work">Work</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#services">Services</a>
+        <a href="#pt">PT-BR</a>
+        <a class="keep" href="https://github.com/rabelojunior81-collab" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Available for US-based remote work and AI product contracts</div>
+          <h1><span class="gradient-text">AI Product Engineer</span><br />building agentic systems, multimodal apps and developer tools.</h1>
+          <p class="subtitle">I turn ambiguous product ideas into <strong>working AI-first prototypes, internal tools, LLM agent workflows and documented engineering handoffs</strong> using TypeScript, React, Node.js, Python and Google Gemini.</p>
+          <p class="signature"><strong>AI-Born Engineer, not merely AI-assisted.</strong> I learned software inside the AI era and use agents as an extension of research, architecture, implementation, testing and documentation.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="#work">View selected work</a>
+            <a class="btn" href="https://github.com/rabelojunior81-collab" target="_blank" rel="noreferrer">Open GitHub</a>
+            <button class="btn" type="button" data-copy="AI Product Engineer / LLM Agent Systems Builder / Full-Stack AI Prototyper. I build AI-first prototypes, multimodal apps, developer tools and documented agent workflows for startups and companies.">Copy short bio</button>
+          </div>
+        </div>
+        <aside class="portrait-card" aria-label="Portrait and positioning">
+          <div class="portrait-frame">
+            <img src="assets/persona-AdilsonRabeloJunior-1774488510967.png" alt="Portrait of Adilson Rabelo Junior" />
+          </div>
+          <div class="portrait-caption">Founder of Rabelus Lab, an independent AI-first product ecosystem focused on agents, multimodal interfaces, developer workflows and knowledge systems.</div>
+        </aside>
+      </div>
+      <div class="wrap proof-bar" aria-label="GitHub audit metrics">
+        <div class="metric"><strong>76</strong><span>repositories mapped in the June 2026 GitHub audit.</span></div>
+        <div class="metric"><strong>19</strong><span>public repositories available as direct evidence.</span></div>
+        <div class="metric"><strong>832</strong><span>commits across cloned repositories.</span></div>
+        <div class="metric"><strong>2.1M+</strong><span>lines of code, documentation and technical artifacts analyzed.</span></div>
+        <div class="metric"><strong>263</strong><span>GitHub calendar contributions in the observed account window.</span></div>
+      </div>
+    </section>
+
+    <section id="positioning">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Professional direction</div>
+          <h2>From AI-native experimentation to business-ready delivery.</h2>
+          <p class="lead">The updated portfolio reframes the Rabelus Lab ecosystem as concrete professional capability: agent systems, AI product prototyping, multimodal interfaces, developer tools and technical documentation that can support small jobs, medium builds and larger product initiatives.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>LLM Agent Systems</h3>
+            <p>I design workflows where agents operate through missions, providers, memory, safety gates, documentation and human-in-the-loop control.</p>
+            <div class="tag-row"><span class="tag">Agent orchestration</span><span class="tag">CLI</span><span class="tag">Multi-provider</span></div>
+          </article>
+          <article class="card">
+            <h3>AI Product Prototyping</h3>
+            <p>I transform product theses into interfaces, proof-of-concepts, roadmaps, PRDs and technical handoffs that teams can evaluate and extend.</p>
+            <div class="tag-row"><span class="tag">MVP</span><span class="tag">React/Vite</span><span class="tag">Handoff</span></div>
+          </article>
+          <article class="card">
+            <h3>Multimodal AI Apps</h3>
+            <p>I build browser-first AI experiences involving chat, voice, image, music, local persistence and user-facing interaction flows.</p>
+            <div class="tag-row"><span class="tag">Gemini</span><span class="tag">Voice</span><span class="tag">Local-first</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Selected work</div>
+          <h2>Projects that prove the operating range.</h2>
+          <p class="lead">Instead of showing every experiment, this section highlights the projects that best translate the GitHub ecosystem into evidence a US company can evaluate quickly.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card case-card">
+            <div class="case-top"><div><h3>Tessy / Argenta Fênix</h3><p class="small">AI-assisted developer workspace and orchestration superproject.</p></div><span class="case-status">Public repo</span></div>
+            <p>Demonstrates developer tooling, AI-assisted engineering workflows, synchronization contracts, product planning and a flagship direction for agent-powered workspaces.</p>
+            <div class="tag-row"><span class="tag">Developer tools</span><span class="tag">Agents</span><span class="tag">Architecture</span><span class="tag">Docs</span></div>
+            <a class="btn" href="https://github.com/rabelojunior81-collab/tessy-argenta-fenix" target="_blank" rel="noreferrer">Open repository</a>
+          </article>
+
+          <article class="card case-card">
+            <div class="case-top"><div><h3>Inception Framework</h3><p class="small">TypeScript-native runtime for autonomous AI agents.</p></div><span class="case-status">Public repo</span></div>
+            <p>Provides the strongest evidence for agentic architecture: missions, providers, CLI patterns, operational control and safety-oriented execution design.</p>
+            <div class="tag-row"><span class="tag">TypeScript</span><span class="tag">Agent runtime</span><span class="tag">CLI</span><span class="tag">Safety</span></div>
+            <a class="btn" href="https://github.com/rabelojunior81-collab/inception-rabelus" target="_blank" rel="noreferrer">Open repository</a>
+          </article>
+
+          <article class="card case-card">
+            <div class="case-top"><div><h3>Talia</h3><p class="small">Browser-first multimodal AI studio powered by Gemini.</p></div><span class="case-status">Public repo</span></div>
+            <p>Shows product UX around multimodal AI: chat, voice, image, music, local-first storage and a studio-like interface for creative and operational workflows.</p>
+            <div class="tag-row"><span class="tag">Gemini</span><span class="tag">Multimodal</span><span class="tag">React</span><span class="tag">IndexedDB</span></div>
+            <a class="btn" href="https://github.com/rabelojunior81-collab/talia-rabelus-lab" target="_blank" rel="noreferrer">Open repository</a>
+          </article>
+
+          <article class="card case-card">
+            <div class="case-top"><div><h3>SOL-Jobs</h3><p class="small">Solana-first freelance escrow protocol and hackathon product hub.</p></div><span class="case-status">Public repo</span></div>
+            <p>Documents a product thesis, hackathon scope, PWA-first roadmap and escrow-centered MVP direction for a digital work marketplace on Solana.</p>
+            <div class="tag-row"><span class="tag">Product strategy</span><span class="tag">Web3</span><span class="tag">Solana</span><span class="tag">PRD</span></div>
+            <a class="btn" href="https://github.com/rabelojunior81-collab/SOL-Jobs" target="_blank" rel="noreferrer">Open repository</a>
+          </article>
+
+          <article class="card case-card">
+            <div class="case-top"><div><h3>Rabelus Lab Public</h3><p class="small">Public architecture and manifesto for the AI-first ecosystem.</p></div><span class="case-status">Public repo</span></div>
+            <p>Consolidates the ecosystem, its verticals, operating philosophy, multilingual documentation and the broader product architecture behind the lab.</p>
+            <div class="tag-row"><span class="tag">Ecosystem</span><span class="tag">Architecture</span><span class="tag">i18n</span><span class="tag">Documentation</span></div>
+            <a class="btn" href="https://github.com/rabelojunior81-collab/rabelus-lab-public" target="_blank" rel="noreferrer">Open repository</a>
+          </article>
+
+          <article class="card case-card">
+            <div class="case-top"><div><h3>DiData</h3><p class="small">AI learning architect for adaptive knowledge products.</p></div><span class="case-status">Public repo</span></div>
+            <p>Represents the education vertical: transforming dense knowledge into structured learning experiences, adaptive guidance and AI-mediated study flows.</p>
+            <div class="tag-row"><span class="tag">EdTech</span><span class="tag">Knowledge systems</span><span class="tag">AI tutoring</span><span class="tag">UX</span></div>
+            <a class="btn" href="https://github.com/rabelojunior81-collab/didata-rabelus-lab" target="_blank" rel="noreferrer">Open repository</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="evidence">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Evidence matrix</div>
+          <h2>Capabilities mapped to concrete repositories.</h2>
+          <p class="lead">This replaces subjective skill percentages with verifiable evidence: what was built, which projects prove it and how that translates into a business or engineering use case.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Capability</th><th>Evidence</th><th>Representative projects</th><th>Business translation</th></tr></thead>
+            <tbody>
+              <tr><td>LLM agent systems</td><td>Mission workflows, providers, orchestration concepts, CLI and governance patterns.</td><td><a href="https://github.com/rabelojunior81-collab/inception-rabelus" target="_blank" rel="noreferrer">Inception</a>, Argenta Holistic Control</td><td>Internal automation, agentic workflows, AI operations and controlled autonomy.</td></tr>
+              <tr><td>AI product prototyping</td><td>Product theses, MVP scopes, PRDs, roadmaps, demos and handoff documents.</td><td><a href="https://github.com/rabelojunior81-collab/SOL-Jobs" target="_blank" rel="noreferrer">SOL-Jobs</a>, Talia, DiData</td><td>Rapid validation of product ideas before full engineering investment.</td></tr>
+              <tr><td>Developer tooling</td><td>Workspace concepts, sync contracts, terminal/IDE direction and agent-assisted engineering flows.</td><td><a href="https://github.com/rabelojunior81-collab/tessy-argenta-fenix" target="_blank" rel="noreferrer">Tessy / Argenta</a></td><td>Engineering productivity, internal tools, AI-assisted code operations and workflow acceleration.</td></tr>
+              <tr><td>Multimodal AI</td><td>Browser-first interfaces involving chat, voice, image, music and local persistence.</td><td><a href="https://github.com/rabelojunior81-collab/talia-rabelus-lab" target="_blank" rel="noreferrer">Talia</a></td><td>Customer-facing AI experiences and creative/productivity studios.</td></tr>
+              <tr><td>Technical documentation</td><td>READMEs, decision records, PRDs, roadmaps, architecture documents and agent-readable handoffs.</td><td>Rabelus Lab, Rabelus Lab Public, SOL-Jobs</td><td>Cleaner collaboration between founders, engineers, AI agents and stakeholders.</td></tr>
+              <tr><td>Applied vertical thinking</td><td>Education, Web3 work marketplace, healthcare concepts, knowledge systems and AI-native productivity.</td><td>DiData, SOL-Jobs, DoctorVerso concepts, Rabelus Lab</td><td>Adapting AI systems to real vertical problems rather than generic demos.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">Metrics note: the current numbers are based on a June 2026 audit of accessible GitHub repositories. The public GitHub build phase is documented from late 2025 onward, while the broader AI/software immersion narrative starts in January 2024.</div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Engagement models</div>
+          <h2>How I can support small, medium and large initiatives.</h2>
+          <p class="lead">The portfolio is now oriented toward action: it explains what a company can hire me to build, audit, prototype or document.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Small jobs</h3>
+            <p>AI workflow audits, prompt systems, landing/proof-of-concept pages, prototype repair, README/documentation upgrades and focused automation.</p>
+            <div class="tag-row"><span class="tag">1–2 weeks</span><span class="tag">Clear scope</span></div>
+          </article>
+          <article class="card">
+            <h3>Medium builds</h3>
+            <p>Internal AI tools, dashboards, multimodal prototypes, LLM-integrated React apps and agent workflows with technical handoff.</p>
+            <div class="tag-row"><span class="tag">3–6 weeks</span><span class="tag">Demo + docs</span></div>
+          </article>
+          <article class="card">
+            <h3>Large initiatives</h3>
+            <p>AI-first product ecosystems, developer tooling, end-to-end MVPs, agent platforms and operational documentation for ongoing development.</p>
+            <div class="tag-row"><span class="tag">2–4 months</span><span class="tag">Architecture + roadmap</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="github">
+      <div class="wrap split-panel">
+        <article class="card">
+          <div class="kicker">GitHub interpretation</div>
+          <h2>High-intensity solo development sprints.</h2>
+          <p>The GitHub record shows concentrated bursts of construction, especially around March and April 2026. This is best represented as an intense AI-first build phase rather than a claim of long daily continuity.</p>
+          <div class="timeline" style="margin-top:18px">
+            <div class="timeline-item"><strong>Jan 2024</strong><p>Beginning of declared AI/software immersion and AI-native learning path.</p></div>
+            <div class="timeline-item"><strong>Sep 2025</strong><p>Observed GitHub account creation window for the current public identity.</p></div>
+            <div class="timeline-item"><strong>Late 2025–2026</strong><p>Public GitHub build phase documented through repositories, commits and project artifacts.</p></div>
+            <div class="timeline-item"><strong>2026</strong><p>Rabelus Lab becomes the umbrella for agentic systems, multimodal apps, developer tools and vertical product experiments.</p></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="kicker">Technical stack</div>
+          <h2>Practical stack for AI-first products.</h2>
+          <p>The portfolio intentionally avoids subjective percentage-based skill claims. Instead, it highlights technologies repeatedly found across the repositories and connected to delivered artifacts.</p>
+          <div class="tag-row" style="margin-top:18px">
+            <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">Google Gemini</span><span class="tag">LLM APIs</span><span class="tag">IndexedDB</span><span class="tag">CLI/TUI</span><span class="tag">GitHub Actions</span><span class="tag">Technical writing</span><span class="tag">Product strategy</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="kicker">Resumo em português</div>
+          <h2>Portfólio bilíngue, direção internacional.</h2>
+          <p class="lead">Esta versão prioriza o inglês para empresas americanas, mas mantém a explicação em português para preservar contexto, identidade e clareza estratégica.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card pt-panel">
+            <h3>Posicionamento</h3>
+            <p>Sou um construtor AI-first focado em transformar ideias ambíguas em protótipos funcionais, ferramentas internas, workflows com agentes, documentação técnica e experiências multimodais. A assinatura “AI-Born Engineer” permanece como marca, mas a apresentação principal passa a ser profissional e verificável: AI Product Engineer, LLM Agent Systems Builder e Full-Stack AI Prototyper.</p>
+          </article>
+          <article class="card pt-panel">
+            <h3>Direção para contratação</h3>
+            <p>O objetivo é mostrar para empresas americanas que o Rabelus Lab não é apenas uma visão filosófica, mas uma prova concreta de capacidade: arquitetar sistemas com IA, prototipar produtos, documentar decisões, criar automações e operar com agentes em projetos pequenos, médios e grandes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="card">
+          <div class="section-head" style="margin-bottom:0">
+            <div class="kicker">Contact</div>
+            <h2>Let’s build a focused AI-first system.</h2>
+            <p class="lead">I am open to remote work, contract projects and collaboration with US-based teams looking for AI product prototypes, internal tools, agent workflows or technical documentation.</p>
+          </div>
+          <div class="cta-row">
+            <a class="btn primary" href="https://github.com/rabelojunior81-collab" target="_blank" rel="noreferrer">GitHub profile</a>
+            <a class="btn" href="mailto:rabelojunior81@gmail.com">Email contact</a>
+            <button class="btn" type="button" data-copy="Adilson Rabelo Junior — AI Product Engineer / LLM Agent Systems Builder. GitHub: https://github.com/rabelojunior81-collab">Copy contact line</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="brand">
+        <img src="assets/argenta_phoenix_logo_1774863937790.png" alt="Rabelus Lab Phoenix logo" />
+        <span class="brand-text"><strong>Rabelus Lab</strong><span>AI-first product ecosystem · 2024–2026</span></span>
+      </div>
+      <div>Updated direction: EN-first, GitHub-evidence-based, resume-ready after approval.</div>
+    </div>
+  </footer>
+
+  <div class="copy-feedback" id="copyFeedback" role="status" aria-live="polite">Copied.</div>
+  <script>
+    const feedback = document.getElementById('copyFeedback');
+    document.querySelectorAll('[data-copy]').forEach((button) => {
+      button.addEventListener('click', async () => {
+        const text = button.getAttribute('data-copy');
+        try {
+          await navigator.clipboard.writeText(text);
+          feedback.classList.add('show');
+          setTimeout(() => feedback.classList.remove('show'), 1500);
+        } catch (error) {
+          feedback.textContent = text;
+          feedback.classList.add('show');
+          setTimeout(() => {
+            feedback.classList.remove('show');
+            feedback.textContent = 'Copied.';
+          }, 3500);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
